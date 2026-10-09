@@ -48,8 +48,9 @@ const PriceInc = async () => {
                 </p>
               </div>
 
-              <div className="flex items-center gap-1 bg-[#fef2f2] text-[#dc2626] px-3 py-1 rounded-full text-xs font-bold">
-                <span>▲</span>
+              <div className="flex items-center gap-1 bg-[#f0fdf4] text-[#16a34a] px-3 py-1 rounded-full text-xs font-bold">
+  <span>▲</span>
+
                 <span>{it.change?.pct}%</span>
               </div>
             </div>

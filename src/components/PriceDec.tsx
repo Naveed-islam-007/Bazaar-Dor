@@ -1,11 +1,9 @@
+import { getProducts } from '@/lib/api';
 import { Product } from '@/types/type';
 import React from 'react';
 
 const PriceDec = async() => {
-    const res = await fetch('https://api.abcz.workers.dev/api/bazardor/products');
-   
-
-      const data: Product[] = await res.json();
+     const data = await getProducts();
     
       const TopDec = data
         ?.filter((d) => d?.change?.dir === 'up')
@@ -45,7 +43,7 @@ const PriceDec = async() => {
               </div>
 
               <div className="flex items-center gap-1 bg-[#fef2f2] text-[#dc2626] px-3 py-1 rounded-full text-xs font-bold">
-                <span>▲</span>
+                <span>▼</span>
                 <span>{it.change?.pct}%</span>
               </div>
             </div>

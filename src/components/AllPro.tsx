@@ -7,7 +7,7 @@ const AllPro = async () => {
   return (
     <div className="container mx-auto mt-20 mb-10">
       <p className="font-semibold text-xl mb-4 text-gray-800">সব পণ্য</p>
-      <p>মোট {data.length.toLocaleString("bn-BD")}টি পণ্য দেখানো হচ্ছে</p>
+      <p className="mb-6">মোট {data.length.toLocaleString("bn-BD")}টি পণ্য দেখানো হচ্ছে</p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
         {data.map((it) => (
@@ -49,9 +49,9 @@ const AllPro = async () => {
                 <div
                   className={`flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold ${
                     it.change.pct > 0
-                      ? "bg-[#fef2f2] text-[#dc2626]"
-                      : it.change.pct < 0
                       ? "bg-[#ecfdf5] text-[#16a34a]"
+                      : it.change.pct < 0
+                      ? "bg-[#fef2f2] text-[#dc2626]"
                       : "bg-gray-100 text-gray-500"
                   }`}
                 >
@@ -59,7 +59,7 @@ const AllPro = async () => {
                     {it.change.pct > 0 ? "▲" : it.change.pct < 0 ? "▼" : "-"}
                   </span>
                   <span>
-                    {it.change.pct === 0 ? "0%" : `${Math.abs(it.change.pct)}%`}
+                    {it.change.pct === 0 ? "0%" : `${it.change.pct}%`}
                   </span>
                 </div>
               )}
