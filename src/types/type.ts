@@ -12,6 +12,7 @@ export type Product = {
   image: string;
   unit: string;
   today: number;
+  categoryNameBn:string;
   categoryIcon:string;
   change: { dir: "up" | "down" | "flat"; pct: number };
 };

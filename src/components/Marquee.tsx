@@ -4,9 +4,9 @@ import "react-marquee-text/dist/styles.css";
 import { Product } from "@/types/type";
 
 const Marquee = async () => {
-  const res = await fetch(
-    "https://api.abcz.workers.dev/api/bazardor/products"
-  );
+ const res = await fetch("https://api.api-store.workers.dev/api/bazardor/products", {
+  next: { revalidate: 3600 },
+});
 
   const products: Product[] = await res.json();
 

@@ -3,6 +3,8 @@ import React from 'react';
 
 const PriceDec = async() => {
     const res = await fetch('https://api.abcz.workers.dev/api/bazardor/products');
+   
+
       const data: Product[] = await res.json();
     
       const TopDec = data
