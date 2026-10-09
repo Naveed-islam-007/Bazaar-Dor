@@ -15,7 +15,7 @@ const NavLinks = async (): Promise<React.JSX.Element> => {
           className="btn btn-sm btn-ghost"
         >
           <span>{item.icon}</span>
-          <span>{item.name}</span>
+          <span>{item.nameBn}</span>
         </Link>
       ))}
     </div>
