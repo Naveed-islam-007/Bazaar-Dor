@@ -23,6 +23,13 @@ const SignIn = () => {
     window.location.href = "/";
   };
 
+  const handleGoogleIn=async()=>{
+    const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  console.log(data);
+  }
+
     return (
         <div className="min-h-screen bg-green-50 flex flex-col items-center pt-8">
       <h1 className="text-2xl font-bold">সাইন ইন</h1>
@@ -46,7 +53,7 @@ const SignIn = () => {
         <p className="text-center text-xs my-3">অথবা</p>
 
         <div className="flex gap-2">
-          <button className="flex-1 border rounded-md p-2 text-xs">Google দিয়ে চালিয়ে যান</button>
+          <button onClick={handleGoogleIn} className="flex-1 border rounded-md p-2 text-xs">Google দিয়ে চালিয়ে যান</button>
           
         </div>
 
